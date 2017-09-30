@@ -11,7 +11,7 @@ rbenv install 2.3.1
 rbenv rehash
 rbenv global 2.3.1
 rbenv local 2.3.1
-gem install bunder
+gem install bundler
 rbenv rehash
 bundle exec danger --fail-on-errors=true
 rake
