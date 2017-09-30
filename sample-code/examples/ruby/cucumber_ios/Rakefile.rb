@@ -13,6 +13,8 @@ task :ios_full do
 
 
 def run_ios_tests
+  sh "brew unlink xz"
   sh "bundle install"
+  sh "brew link xz"
   sh "bundle exec cucumber -p iphonesim"
 end
