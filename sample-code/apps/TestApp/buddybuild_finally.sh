@@ -14,6 +14,5 @@ rbenv global 2.3.1
 rbenv local 2.3.1
 gem install bundler
 rbenv rehash
-gem install danger
 bundle exec danger --fail-on-errors=true
 rake
