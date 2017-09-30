@@ -1,5 +1,9 @@
 
 cd '../../examples/ruby/cucumber_ios/'
+brew update
+brew unlink openssl
+brew uninstall --ignore-dependencies openssl
+brew install openssl
 brew install rbenv
 rbenv install 2.3.1
 rbenv rehash
