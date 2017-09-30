@@ -13,9 +13,9 @@ task :ios_full do
 
 
 def run_ios_tests
-  sh 'appium &'
   sh "brew unlink xz"
   sh "bundle install"
   sh "brew link xz"
+  sh 'appium &'
   sh "bundle exec cucumber -p iphonesim"
 end
