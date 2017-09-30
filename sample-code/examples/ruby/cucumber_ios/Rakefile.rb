@@ -13,5 +13,6 @@ task :ios_full do
 
 
 def run_ios_tests
+  sh "bundle install"
   sh "bundle exec cucumber -p iphonesim"
 end
