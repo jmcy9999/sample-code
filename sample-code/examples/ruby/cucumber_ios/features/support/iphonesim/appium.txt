@@ -1,7 +1,7 @@
 [caps]
 platformName = "ios"
 deviceName = "iPhone 7"
-platformVersion = "10.3.1"
+platformVersion = "10.3"
 app = "../../../apps/TestApp/build/release-iphonesimulator/TestApp.app"
 automationName = 'XCUITest'
 
