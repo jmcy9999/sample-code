@@ -24,6 +24,7 @@ def run_ios_tests
   sh "npm install -g appium"
   sh 'npm install wd'
   sh "appium &"
+  sleep 30
   sh "bundle exec cucumber -p iphonesim"
 end
 
