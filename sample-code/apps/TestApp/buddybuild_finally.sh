@@ -18,7 +18,7 @@ rbenv global 2.3.1
 rbenv local 2.3.1
 npm install -g appium
 npm install wd
-echo password | sudo -S auuthorize_ios
+echo password | sudo -S authorize_ios
 nohup appium --native-instruments-lib -lt 999999 &
 sleep 15 && rake; pkill -f appium
 
