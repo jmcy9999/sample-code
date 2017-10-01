@@ -18,7 +18,10 @@ rbenv global 2.3.1
 rbenv local 2.3.1
 npm install -g appium
 npm install wd
-echo password | sudo -S authorize_ios
-nohup appium --native-instruments-lib -lt 999999 &
-sleep 15 && rake; pkill -f appium
+nohup appium 999999 &
+sleep 15 &&
+brew unlink xz
+bundle install
+brew link xz
+bundle exec cucumber -p iphonesim
 
