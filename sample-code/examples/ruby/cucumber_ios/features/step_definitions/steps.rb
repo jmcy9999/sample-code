@@ -25,10 +25,11 @@ Given /^I have entered (\d+) into field (\d+) of the calculator$/ do |value, fie
   sleep 15
   page
   page_class
+  sleep 5
   button('OK').click
   sleep 5
-  page
-  page_class
+  button('OK').click
+  sleep 3
   # Get a textfield by index
   textfield(field.to_i).type value
 end
