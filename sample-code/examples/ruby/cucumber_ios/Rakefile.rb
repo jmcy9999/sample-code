@@ -21,10 +21,6 @@ def run_ios_tests
   sh "brew unlink xz"
   sh "bundle install"
   sh "brew link xz"
-  sh "npm install -g appium"
-  sh 'npm install wd'
-  sh "appium &"
-  sleep 30
   sh "bundle exec cucumber -p iphonesim"
 end
 

@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 cd '../../examples/ruby/cucumber_ios/'
+gem install bundler
+gem install danger
+rbenv rehash
+bundle exec danger --fail-on-errors=true
 brew update
 brew unlink openssl
 brew uninstall --ignore-dependencies openssl
@@ -12,7 +16,9 @@ rbenv install 2.3.1
 rbenv rehash
 rbenv global 2.3.1
 rbenv local 2.3.1
-gem install bundler
-rbenv rehash
-bundle exec danger --fail-on-errors=true
-rake
+npm install -g appium
+npm install wd
+echo password | sudo -S auuthorize_ios
+nohup appium --native-instruments-lib -lt 999999 &
+sleep 15 && rake; pkill -f appium
+
