@@ -22,6 +22,7 @@
 # https://www.relishapp.com/rspec/rspec-expectations/docs
 
 Given /^I have entered (\d+) into field (\d+) of the calculator$/ do |value, field|
+  sleep 15
   # Get a textfield by index
   textfield(field.to_i).type value
 end
