@@ -25,7 +25,7 @@ Given /^I have entered (\d+) into field (\d+) of the calculator$/ do |value, fie
   sleep 15
   page
   page_class
-  find_element(:class, 'XCUIElementTypeAlert').tap
+  alert_accept
   sleep 5
   # Get a textfield by index
   textfield(field.to_i).type value
