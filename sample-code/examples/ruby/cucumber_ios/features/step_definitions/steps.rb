@@ -23,6 +23,8 @@
 
 Given /^I have entered (\d+) into field (\d+) of the calculator$/ do |value, field|
   sleep 15
+  page
+  page_class
   # Get a textfield by index
   textfield(field.to_i).type value
 end
